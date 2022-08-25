@@ -17,6 +17,9 @@
 - <strong>git pull origin nombre-rama</strong> (traer cambios del repositorio en github)
 - <strong>git pull origin nombre-rama</strong>
 - <strong>git push origin -d nombre-rama</strong> (eliminar rama de github)
+- <strong>git reset --hard</strong> (Devolverse al último commit. Nota: Se elimina el commit actual)
+- <strong>git reset --hard <i>id-commit</i> </strong> (Devolverse a un commit específico. Nota: Se eliminan los commits después de ese)
+- <strong>git commit -ammend -m "comentario"</strong> (unir cambios al commit anterior sin eliminar)
 
 ### Tools
 
