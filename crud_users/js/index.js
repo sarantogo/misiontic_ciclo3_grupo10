@@ -5,10 +5,10 @@ const users = [
     {foto:"https://avatars.dicebear.com/api/micah/:seed.svg?mouth=smile&baseColor=apricot&hair=full", nombre: "Laura", apellido: "Hernandez", email: "laura@gmail.com", fecha_nacimiento: "25/11/1995"}
 ];
 
+function mostrarUsuarios(users){
 //Referenciar la tabla:
 const tabla = document.getElementById("table-users");
 let tbody='<tbody>'
-
 for (let i=0; i<users.length; i++){
     const obj =users[i]
     tbody+=`
@@ -23,3 +23,6 @@ for (let i=0; i<users.length; i++){
 }
 tbody+='</tbody>'
 tabla.innerHTML += tbody
+}
+
+mostrarUsuarios(users); 

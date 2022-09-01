@@ -2,6 +2,11 @@
     text-align: center;
     color: aliceblue;
 }
+
+header {
+    display: flex;
+    justify-content: center;
+}
 td, th, table {
     border: 1.5px solid rgb(22, 214, 156);
     padding-left: 15px;
@@ -19,9 +24,7 @@ width: 100%;
     padding: 40px;
 }
 #cont-btn-crear-usuario {
-    padding-left:  45%;
-}
-button {
-    color: lightskyblue;
-    
+	display: flex;
+    justify-content: center;
+    padding-top: 10px;
 }
