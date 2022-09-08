@@ -27,8 +27,9 @@ public class Persona {
   @Column(name = "foto")
   private String foto;
 
+  public Persona(){};
   // CONSTRUCTOR
-  public Persona(int id, String nombres, String apellidos, String email, Date fecha_nacimiento, String foto) {
+  public Persona(String nombres, String apellidos, String email, Date fecha_nacimiento, String foto) {
     this.id = id;
     this.nombres = nombres;
     this.apellidos = apellidos;
