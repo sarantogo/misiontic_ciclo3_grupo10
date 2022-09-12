@@ -1,5 +1,6 @@
 package com.hibernate.introduction.modelo;
 
+import java.util.Calendar;
 import java.util.Date;
 
 import jakarta.persistence.Column;
@@ -23,19 +24,32 @@ public class Persona {
   @Column(name = "email")
   private String email;
   @Column(name = "fecha_nacimiento")
-  private Date fecha_nacimiento;
+  private Calendar fecha_nacimiento;
   @Column(name = "foto")
   private String foto;
 
   public Persona(){};
   // CONSTRUCTOR
-  public Persona(String nombres, String apellidos, String email, Date fecha_nacimiento, String foto) {
-    this.id = id;
+  public Persona(String nombres, String apellidos, String email, Calendar fecha_nacimiento, String foto) {
     this.nombres = nombres;
     this.apellidos = apellidos;
     this.email = email;
     this.fecha_nacimiento = fecha_nacimiento;
     this.foto = foto;
+  }
+
+  @Override
+  public String toString() {
+    String info = "------------------------------\n";
+    info += "Id: " + id;
+    info += "\nNombres: " + nombres;
+    info += "\nApellidos: " + apellidos;
+    info += "\nEmail: " + email;
+    info += "\nFecha nacimiento: " + fecha_nacimiento.getTime();
+    info += "\nFoto: " + foto;
+    info += "\n------------------------------\n";
+
+    return info;
   }
 
   // CONSULTORES
@@ -55,7 +69,7 @@ public class Persona {
     return email;
   }
 
-  public Date getFecha_nacimiento() {
+  public Calendar getFecha_nacimiento() {
     return fecha_nacimiento;
   }
 
@@ -76,7 +90,7 @@ public class Persona {
     this.email = email;
   }
 
-  public void setFecha_nacimiento(Date fecha_nacimiento) {
+  public void setFecha_nacimiento(Calendar fecha_nacimiento) {
     this.fecha_nacimiento = fecha_nacimiento;
   }
 
